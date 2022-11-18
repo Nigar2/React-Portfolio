@@ -32,7 +32,7 @@
   --testimonial-bg: #1a0f4f;
   --font-name: "Roboto", sans-serif;
   --small-text-color: rgba(255, 255, 255, 0.774);
-  --icon-bg:#151e4f;
+  --icon-bg:#23325f;
 }
 
 .light-theme {
@@ -87,4 +87,9 @@ section{
   font-size: .9rem;
 }
 
-
+.subtitle{
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-weight: 400;
+  margin-bottom: 20px;
+}

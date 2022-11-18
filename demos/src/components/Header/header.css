@@ -12,10 +12,14 @@
     font-weight: 400;
     font-size: .9rem;
     cursor: pointer;
+    transition: .3s ease-in-out;
 }
 
 .menu__link:hover{
     color: var(--link-active);
+    padding-bottom: 10px;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .logo h2{

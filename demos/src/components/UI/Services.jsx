@@ -1,6 +1,31 @@
 import React from 'react'
 import '../../styles/services.css'
 
+const serviceData = [
+    {
+        icon: ' ri-apps-line',
+        title: 'App Development',
+        desc: 'Lorem, ipsum dolor sit amet elit.  quisquam ratione maxime alias ad eveniet illo quas possimus aspernatur.'
+    },
+    {
+        icon: ' ri-code-s-slash-line',
+        title: 'Web Design',
+        desc: 'Lorem, ipsum dolor sit amet elit.  quisquam ratione maxime alias ad eveniet illo quas possimus aspernatur.'
+    },
+    {
+        icon: ' ri-landscape-line',
+        title: 'Graphics Design',
+        desc: 'Lorem, ipsum dolor sit amet elit.  quisquam ratione maxime alias ad eveniet illo quas possimus aspernatur.'
+    },
+
+    {
+        icon: ' ri-rocket-line',
+        title: 'Digital Markenting',
+        desc: 'Lorem, ipsum dolor sit amet elit.  quisquam ratione maxime alias ad eveniet illo quas possimus aspernatur.'
+    },
+    
+]
+
 const Services = () => {
   return (
     <section id="service">
@@ -11,14 +36,17 @@ const Services = () => {
                 <h2 className="highlight">our best services</h2>
             </div>
 
-            <div className="services__item-wrapper">
-                <div className="services__item">
-                    <span className="service__icon"><i class="ri-apps-line"></i></span>
-                    <h3 className="service__title">App Development</h3>
-                    <p className="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem mollitia iste reiciendis, laborum eligendi porro itaque tenetur ex repellendus provident!</p>
-                    
-
+            <div className="service__item-wrapper">
+                {
+                    serviceData.map((item,index)=>(
+                        <div className="services__item" key={index}>
+                    <span className="service__icon">
+                    <i class={item.icon}></i></span>
+                    <h3 className="service__title">{item.title}</h3>
+                    <p className="description">{item.desc}</p>
                 </div>
+                    ))
+                }
             </div>
         </div>
     </section>
